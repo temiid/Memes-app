@@ -1,0 +1,807 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: black;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    background: transparent;
+    border-bottom-color: rgba(245, 245, 245,0.1); 
+    /* max-width: 1200px; */
+
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* MEDIA QUERY FOR SMALL SCREEN */
+
+/* NAV */
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    background:none;
+   
+}
+
+.nav-brand{
+    font-family: 'Passion One', cursive;
+    font-size: 30px;
+    margin-top: -35px;
+    position: absolute;
+    
+}
+
+.wrapper ul.move{
+    text-align: center;
+    padding-top: 0px;
+}
+
+nav li.nav-brand a:hover{
+        background: transparent
+}
+
+nav li.nav-brand a {
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid transparent;
+     /* transition: 2.5s;  */
+    
+}
+
+nav li.nav-links a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid transparent;
+     /* transition: 2.5s;  */
+    
+}
+
+.profile{
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    padding: 0px;
+    cursor: pointer;
+    top: 2.5%;  
+    left: 70%; 
+    list-style: none;
+    
+}
+
+/* nav{
+    display: flex;
+    justify-content: center;
+} */
+
+.nav-links{
+     font-family: 'Montserrat', sans-serif;
+     font-size: 13px;
+}
+
+nav a:hover{
+    box-sizing: border-box;
+    background: rgba(252, 228, 236,0.54);
+    
+}
+
+
+/* NAV ICON STYLES */
+
+.ion-chevron-down{
+    color:rgba(255, 152, 0,1.0)
+}
+
+.ion-android-favorite-outline{
+     color: rgba(233, 30, 99,1.0);
+}
+
+.ion-grid{
+     color: rgba(38, 166, 154,1.0);
+}
+
+.ion-ios-loop-strong{
+     color: rgba(255, 152, 0,1.0);
+}
+
+
+.btn{
+    width: 30px;
+    height: 28px;
+    position: absolute;
+    border-radius: 60px;
+    padding: 0px;
+     border: 1px solid rgba(2, 136, 209,1.0);
+    background: black;
+    cursor: pointer;
+    top: 27%;  
+    left: 35%; 
+    transition: 0.5s;
+    overflow: hidden ;
+    opacity: 0;
+    
+}
+
+.btn:before{
+    content: '\f4cb';
+    font-family: 'Ionicons';
+    color: rgba(2, 136, 209,1.0);
+    top: 15%;
+    left: 30%;
+    position: absolute;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.btn:after{
+    content: 'Upload a meme';
+     line-height: 50px; 
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    color: rgba(250, 250, 250,0.9);
+    font-size: 12px;
+    position: absolute;
+    top: -50%;
+    left: calc(60% + 20px);
+    transition: all 0.3s;
+    
+}
+
+.btn:hover{
+   background:rgba(2, 136, 209,1.0);
+   border: 1px solid rgba(2, 136, 209,1.0);
+   width: 170px;
+   transition:  0.5s;
+   transform:translateX(-80px)
+}
+
+.btn:hover:before{
+    left:-50px;
+   
+}
+
+.btn:hover:after{
+    left:20%;
+   
+}
+
+
+/* CAPTION MEMO BUTTON */
+
+.btn2{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 60px;
+    padding: 0px;
+     border: 1px solid rgba(233, 30, 99,1.0);
+    background: black;
+    cursor: pointer;
+      top: 27%; 
+    left: 60%; 
+    transition: 0.5s;
+     overflow: hidden ;
+     opacity: 0;
+}
+
+.btn2:before{
+    content: '\f2bf';
+    font-family: 'Ionicons';
+    color: rgba(233, 30, 99,1.0);
+    top: 15%;
+    left: 25%;
+    position: absolute;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.btn2:after{
+    content: 'Caption a meme';
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    color: rgba(250, 250, 250,0.9);
+    font-size: 12px;
+    position: absolute;
+    top: -42%;
+    left: calc(60% + 20px);
+    transition: all 0.3s;
+    
+}
+
+.btn2:hover{
+   background:rgba(233, 30, 99,1.0);
+   border: 1px solid rgba(233, 30, 99,1.0);
+   width: 170px;
+    transition:  0.5s;
+   transform:translateX(-80px)
+}
+
+.btn2:hover:before{
+    left:-50px;
+   
+}
+
+.btn2:hover:after{
+    left:20%;
+   
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* MEDIA QUERY FOR LARGE SCREEN NAVIGATION */
+
+@media screen and (min-width: 768px){
+   nav ul {
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+   /* nav a {
+    padding: 15px;
+    } */
+
+    .nav-brand{
+        margin-top: -30px;
+        margin-left: 30px;
+        position: absolute;
+    }
+
+    .nav-links{
+         margin-top: -10px;
+    }
+    
+    nav li a.burger-nav{
+        position: absolute;
+    }
+    
+    .wrapper ul.move{
+        margin-left: 20% !important;
+        margin-bottom: 10px !important;
+        padding-top: 2px !important;
+        background: none !important;  
+    }
+
+    nav li.nav-brand a:hover{
+        background: transparent;
+        cursor: pointer;
+    }
+
+    nav li.nav-links a:hover{
+        background: transparent;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.7)
+    }
+
+
+.profile{
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    padding: 0px;
+    cursor: pointer;
+    top: 3%;  
+    left: 90%;
+    list-style: none;
+    
+}
+
+    .profile a:hover{
+        background: transparent;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.8)
+    }
+
+
+/* UPLOAD BUTTON */
+
+.btn{
+    width: 34px;
+    height: 33px;
+    position: absolute;
+    border-radius: 60px;
+    padding: 0px;
+     border: 1px solid rgba(2, 136, 209,1.0);
+    background: black;
+    cursor: pointer;
+    top: 1.6%;  
+    left: 60%; 
+    transition: 0.5s;
+    overflow: hidden ;
+    opacity: 1;   
+}
+
+.btn:before{
+    content: '\f4cb';
+    font-family: 'Ionicons';
+    color: rgba(2, 136, 209,1.0);
+    top: 15%;
+    left: 32%;
+    position: absolute;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.btn:after{
+    content: 'Upload a meme';
+     line-height: 50px; 
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    color: rgba(250, 250, 250,0.9);
+    font-size: 12px;
+    position: absolute;
+    top: -28%;
+    left: calc(60% + 20px);
+    transition: all 0.3s;
+    
+}
+
+.btn:hover{
+   background:rgba(2, 136, 209,1.0);
+   border: 1px solid rgba(2, 136, 209,1.0);
+   width: 170px;
+   transition:  0.5s;
+   transform:translateX(-80px)
+}
+
+.btn:hover:before{
+    left:-50px;
+   
+}
+
+.btn:hover:after{
+    left:20%;
+   
+}
+
+
+/* CAPTION MEMO BUTTON */
+
+.btn2{
+    width: 34px;
+    height: 33px;
+    position: absolute;
+    border-radius: 60px;
+    padding: 0px;
+     border: 1px solid rgba(233, 30, 99,1.0);
+    background: black;
+    cursor: pointer;
+      top: 1.6%; 
+    left: 70%; 
+    transition: 0.5s;
+     overflow: hidden ;
+    opacity: 1;   
+     
+}
+
+.btn2:before{
+    content: '\f2bf';
+    font-family: 'Ionicons';
+    color: rgba(233, 30, 99,1.0);
+    top: 15%;
+    left: 25%;
+    position: absolute;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.btn2:after{
+    content: 'Caption a meme';
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    color: rgba(250, 250, 250,0.9);
+    font-size: 12px;
+    position: absolute;
+    top: -28%;
+    left: calc(60% + 20px);
+    transition: all 0.3s;
+    
+}
+
+.btn2:hover{
+   background:rgba(233, 30, 99,1.0);
+   border: 1px solid rgba(233, 30, 99,1.0);
+   width: 160px;
+    transition:  0.5s;
+   transform:translateX(-50px)
+}
+
+.btn2:hover:before{
+    left:-50px;
+   
+}
+
+.btn2:hover:after{
+    left:16%;
+   
+}
+
+
+}/* }QUERY END */
+
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* SECTION1 FOR MAIN FILTERS AND SEARCH BOX */
+
+.wrapper2{
+    background: none;
+    width: 100%;
+    max-width: 786px;
+    margin: 40px auto;
+     font-family: 'Montserrat', sans-serif;
+     text-align: center;
+     font-size: 13px;
+
+}
+
+.wrapper2 ul li.main-filter{
+     display: flex;
+     flex-wrap: wrap;
+    list-style: none;
+    /* padding: 0; */
+    background: none;
+    margin: 0 auto;
+    
+}
+
+.filter{
+    color:rgba(255, 255, 255, 0.9);
+    width: 150px;
+    
+}
+
+li.main-filter a{
+    text-decoration: none;
+    
+}
+ 
+/* MAIN FILTER  HOVER */
+.one:hover{
+    background: rgba(0, 121, 107,1.0);
+    
+}
+
+.two:hover{
+    background: rgba(81, 45, 168,1.0);
+    
+}
+.three:hover{
+    background: rgba(81, 45, 168,1.0);
+    
+}
+
+/* MAIN FILTER */
+.one{
+    background: rgba(38, 166, 154,1.0);
+      padding: 16px 0px 16px 0px;
+}
+
+.two{
+    background: rgba(103, 58, 183,1.0);
+     padding: 16px 0px 16px 0px;
+}
+
+.three{
+    background: rgba(103, 58, 183,1.0);
+     padding: 16px 0px 16px 0px;
+}
+
+
+/*SEARCH */
+.wrapper2 ul{
+     display: flex;
+     flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+}
+
+
+ .form{
+    padding: 0px 0px 0px 0px;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+.form-search-input{
+	width: 0px;
+	height: 48px;
+	border: 0;
+	outline: 0;
+	font-size: 13px;
+	padding: 0px 0px 0px 0px;
+	color: #151515;
+	transition: all 0.5s;
+}
+
+.search-input-open{
+	width: 290px !important;
+	padding: 0px 0px 0px 20px !important;
+	display: initial !important;
+}
+.form-search-submit{
+	display: absolute;
+	width: 55px;
+    height: 45px;
+    /* margin-bottom: -80%; */
+	border: 0;
+	outline: 0;
+	background-color: none;
+	font-size: 21px;
+	color: #FFF;
+	cursor: pointer;
+	text-align: center;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/*  SECTION1 MEDIA QUERY FOR SMALL SCREEN SEARCH BAR */
+
+@media screen and (max-width: 767px){
+
+    .wrapper2{
+        background: none;
+        width: 100%;
+        max-width: 500px;
+        margin: 5px auto;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 10px;
+         /* background: red;  */
+
+    }
+
+    .filter{
+        color:white;
+        width: 100px;
+    
+        }
+
+        .one{
+            background: rgba(38, 166, 154,1.0);
+            padding: 10px 0px 10px 0px;
+        }
+
+        .two{
+            background: rgba(103, 58, 183,1.0);
+             padding: 10px 0px 10px 0px;
+        }
+
+        .three{
+            background: rgba(103, 58, 183,1.0);
+             padding: 10px 0px 10px 0px;
+        }
+
+
+    .wrapper2 ul{
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        }
+
+    .form-search-input{
+        width: 0px;
+        height: 32px;
+        border: 0;
+        outline: 0;
+        font-size: 10px;
+        padding: 0px 0px 0px 0px;
+        color: #151515;
+        transition: all 0.5s;
+    }
+
+     .search-input-open{
+        width: 200px !important;
+        padding: 0px 0px 0px 20px !important;
+        display: initial !important;
+    }
+
+    .form{
+        padding: 10px 0px 55px 0px;
+        
+    } 
+
+   }/* QUERY END */
+
+    
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* SECTION2 FOR LARGE SCREEN MINOR FILTER */
+
+/* MINOR FILTER */
+
+.wrapper3{
+    /* background: red; */
+    width: 100%;
+    margin: 40px auto; 
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 13px;
+    padding: 0px;
+
+
+}
+
+.wrapper3 li{
+        display: flex;
+        max-width: 1100px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        list-style: none;
+        justify-content: center;
+        margin: 0 auto;
+        background: none; 
+}
+
+
+.filter2{
+    color: black;
+    width: 146px;
+    border-radius:0px;
+    margin-left: 6px;
+     padding: 16px 0px 16px 0px;
+    
+}
+
+li.minor-filter a{
+    text-decoration: none;
+    
+}
+
+ul.wrapper3{
+    list-style: none;
+}
+
+/* .filter-search{
+    color
+}
+  */
+
+/* MINOR FILTER HOVER */
+.four:hover{
+    background: rgba(149, 117, 205,1.0);
+    
+}
+
+.five:hover{
+    background: rgba(240, 98, 146,1.0);
+    
+}
+.six:hover{
+    background: rgba(255, 167, 38,1.0);
+    
+}
+
+.seven:hover{
+    background: rgba(0, 121, 107,1.0);
+    
+}
+
+.eight:hover{
+    background: rgba(171, 71, 188,1.0);
+    
+}
+.nine:hover{
+    background: rgba(3, 169, 244,1.0);
+    
+}
+
+/* MINOR FILTER */
+
+.four{
+    background: rgba(179, 157, 219,1.0);
+   
+}
+
+.five{
+    background: rgba(244, 143, 177,1.0);
+}
+
+.six{
+    background: rgba(255, 183, 77,1.0);
+}
+
+.seven{
+    background: rgba(38, 166, 154,1.0);
+}
+
+.eight{
+    background: rgba(186, 104, 200,1.0);
+}
+
+.nine{
+    background: rgba(79, 195, 247,1.0);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* SECTION2 MEDIA QUERY FOR SMALL SCREEN MINOR FILTER */
+
+
+@media screen and (max-width: 767px){ 
+
+/* MINOR FILTER */
+
+.wrapper3{
+     /* background: red; */
+    width: 100%;
+    margin: 0px auto; 
+    margin-top: -50px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 13px;
+    padding: 0px;
+
+
+}
+
+ .filter2{
+    width: 150px;
+    border-radius:0px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 5px; 
+     height: 0px;
+     padding: 0px;
+    color: transparent;
+    opacity: 0;
+     transition: 0.2s
+}
+
+
+.filter3{
+    height: auto !important;
+    padding: 16px 0px 16px 0px !important;
+    color: black !important;
+    opacity: 1;
+    transition: 0.2s
+}
+
+.wrapper3 li .filter-search{
+     color: rgba(233, 30, 99,1.0); 
+     margin: 5%;
+     margin-bottom: 1%;
+     padding: 0px;
+     font-size: 13px;
+}
+
+.wrapper3 li a.grab{
+    /* background: red; */
+    height: 30px;
+    width: 250px;
+    margin-top: -4%;
+    
+}
+
+
+}
